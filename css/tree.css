@@ -1,0 +1,198 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+}
+form {
+  height: 100%;
+}
+body {
+  padding-left: 10px;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.main {
+  border: 1px solid #eee;
+  float: left;
+  width: 280px;
+  height: 100%;
+  overflow: hidden;
+}
+.main .title {
+  width: 100%;
+  line-height: 45px;
+  font-size: 16px;
+  text-align: left;
+  padding: 0px 20px;
+  border-bottom: 1px solid #eee;
+}
+.main .button_box {
+  border-top: 1px solid #eee;
+  overflow: hidden;
+}
+.main .button_box a {
+  float: left;
+  line-height: 45px;
+  color: #24C79E;
+  text-align: center;
+  width: 50%;
+  text-decoration: none;
+}
+.tree {
+  width: 280px;
+  height: calc(100% - 90px);
+}
+.tree .tree_title {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 45px;
+  height: auto;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+}
+.tree .tree_title span {
+  float: right;
+  width: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 10px;
+}
+.tree .tree_box {
+  height: 100%;
+}
+.tree .tree_box ul {
+  height: calc(100% - 45px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.tree .tree_box ul li.tree_item.open > .tree_main {
+  background: rgba(36, 199, 158, 0.2);
+}
+.tree .tree_box ul li.tree_item.open > .tree_main > div.domain {
+  display: block;
+}
+.tree .tree_box ul li.tree_item.haschildren:before {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  content: '';
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-left: 6px solid #aaa;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+  transition: all 0.5s;
+}
+.tree .tree_box ul li.tree_item {
+  overflow: hidden;
+  line-height: 30px;
+  text-align: left;
+  padding-left: 18px;
+  position: relative;
+}
+.tree .tree_box ul li.tree_item > ul {
+  display: none;
+}
+.tree .tree_box ul li.tree_item div.tree_main {
+  margin: 1px 0px;
+}
+.tree .tree_box ul li.tree_item div.tree_main.active {
+  background: rgba(36, 199, 158, 0.2);
+}
+.tree .tree_box ul li.tree_item div.tree_main.active div.domain {
+  display: block;
+}
+.tree .tree_box ul li.tree_item p {
+  cursor: pointer;
+  padding-left: 5px;
+  font-size: 14px;
+  width: 65%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tree .tree_box ul li.tree_item input {
+  margin-top: 2px;
+  display: none;
+  border: 1px solid #24C79E;
+  height: 28px;
+  vertical-align: middle;
+  border-radius: 14px;
+  width: 56%;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0px 10px;
+  outline: none;
+}
+.tree .tree_box ul li.tree_item input.editInput {
+  position: absolute;
+  top: 0px;
+  left: 17px;
+}
+.tree .tree_box ul li.tree_item input.active {
+  display: block;
+}
+.tree .tree_box ul li.tree_item div.domain.hide {
+  display: none !important;
+}
+.tree .tree_box ul li.tree_item div.domain {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  height: 100%;
+  display: none;
+}
+.tree .tree_box ul li.tree_item div.domain span {
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin: 4px;
+  cursor: pointer;
+}
+.tree .tree_box ul li.tree_item div.domain span.new {
+  background: url("../images/new.png") no-repeat center center;
+  background-size: 90%;
+}
+.tree .tree_box ul li.tree_item div.domain span.delete {
+  background: url("../images/alter_delete.png") no-repeat center center;
+  background-size: cover;
+}
+.tree .tree_box ul li.tree_item div.domain span.edit {
+  background: url("../images/edit.png") no-repeat center center;
+  background-size: cover;
+}
+.tree .tree_box ul li.tree_item.active.haschildren:before {
+  transform: rotate(90deg);
+}
+.content {
+  height: 100%;
+}
+.right {
+  margin-left: 300px;
+}
+.right .bread {
+  overflow: hidden;
+  color: #999;
+}
+.right .bread p {
+  float: left;
+}
+.right .bread span {
+  float: left;
+}
+.right .bread span b {
+  font-family: '宋体';
+  margin: 0px 3px;
+}
+/*# sourceMappingURL=tree.css.map */

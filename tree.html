@@ -1,0 +1,171 @@
+<!doctype html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tree</title>
+    <link rel="stylesheet" href="css/tree.css">
+</head>
+<body>
+    <div class="content">
+        <div class="main">
+            <div class="title">FAQ管理</div>
+            <div class="tree">
+                <h5 class="tree_title">全部分类 (<b></b>) <span>+</span></h5>
+                <div class="tree_box">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="button_box">
+                <a href="#" class="newfaq">+ 新建FAQ</a>
+                <a href="#" class="daoru">一键导入</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="bread">
+                <p>全部</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/tree.js"></script>
+    <script>
+        var data = {
+            code:200,
+            message:'success',
+            result:{
+                all_num:20,
+                data:[
+                    {
+                        id:'1',
+                        count:'5',
+                        name:'个人信息管理1',
+                        ProSort: "14557",
+                        remark: "",
+                        pid: "",
+                        isEdit: "",
+                        children:[
+                            {
+                                id: "14579",
+                                count: "0",
+                                name: "市值、额度1",
+                                ProSort: "14579",
+                                remark: "",
+                                pid: "1",
+                                isEdit: "",
+                                children: []
+                            },
+                            {
+                                id: "14579",
+                                count: "0",
+                                name: "市值、额度2",
+                                ProSort: "14579",
+                                remark: "",
+                                pid: "1",
+                                isEdit: "",
+                                children: []
+                            },
+                            {
+                                id: "14579",
+                                count: "0",
+                                name: "市值、额度3",
+                                ProSort: "14579",
+                                remark: "",
+                                pid: "1",
+                                isEdit: "",
+                                children: []
+                            },
+                            {
+                                id: "14579",
+                                count: "0",
+                                name: "市值、额度4",
+                                ProSort: "14579",
+                                remark: "",
+                                pid: "1",
+                                isEdit: "",
+                                children: []
+                            },
+                            {
+                                id: "14579",
+                                count: "0",
+                                name: "市值、额度5",
+                                ProSort: "14579",
+                                remark: "",
+                                pid: "1",
+                                isEdit: "",
+                                children: []
+                            },
+                        ]
+                    },
+                    {
+                        id:'2',
+                        count:'0',
+                        name:'个人信息管理2',
+                        ProSort: "14557",
+                        remark: "",
+                        pid: "",
+                        isEdit: "",
+                        children:[]
+                    },
+                    {
+                        id:'3',
+                        count:'2',
+                        name:'个人信息管理3',
+                        ProSort: "14557",
+                        remark: "",
+                        pid: "",
+                        isEdit: "",
+                        children:[
+                            {
+                                id: "14579",
+                                count: "0",
+                                name: "市值、额度6",
+                                ProSort: "14579",
+                                remark: "",
+                                pid: "1",
+                                isEdit: "",
+                                children: []
+                            },
+                            {
+                                id: "14579",
+                                count: "0",
+                                name: "市值、额度7",
+                                ProSort: "14579",
+                                remark: "",
+                                pid: "1",
+                                isEdit: "",
+                                children: []
+                            },
+                        ]
+                    }
+                ]
+            }
+        }
+        $('.tree').makeTree({
+            data:data.result.data,
+            maxLevel:3,
+            intemClick:function(data){
+                console.log(data)
+            },
+            newItem:function(data){
+                console.log(data)
+            },
+            editMe:function(data){
+                console.log(data)
+            },
+            delete:function(data){
+                console.log(data)
+            },
+            openChild:function(data){
+                console.log(data)
+            }
+        })
+        $('.tree_title b').html(data.result.all_num)
+
+    </script>
+</body>
+</html>
