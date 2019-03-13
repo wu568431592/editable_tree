@@ -1,5 +1,5 @@
 # editable_tree
-> 一个可以编辑的树形菜单栏,好自带Breadcrumb哦~
+> 一个可以编辑的树形菜单栏,还自带Breadcrumb哦~
 ## 如何使用
 > 引入css
 ```html
